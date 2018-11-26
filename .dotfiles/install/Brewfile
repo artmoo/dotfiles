@@ -1,0 +1,4 @@
+brew "coreutils"
+brew "tree"
+brew "python"
+brew "python@2"

@@ -1,0 +1,37 @@
+# Shortcuts
+
+alias reload="source ~/.bash_profile"
+alias _="sudo"
+alias g="git"
+
+# Default options
+
+# List declared aliases, functions, paths
+
+alias aliases="alias | sed 's/=.*//'"
+alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
+alias paths='echo -e ${PATH//:/\\n}'
+
+# Directory listing/traversal
+
+LS_COLORS=$(is-supported "ls --color" --color -G)
+LS_TIMESTYLEISO=$(is-supported "ls --time-style=long-iso" --time-style=long-iso)
+LS_GROUPDIRSFIRST=$(is-supported "ls --group-directories-first" --group-directories-first)
+
+alias l="ls -lhA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
+alias ll="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO"
+alias ld="ls -ld $LS_COLORS */"
+
+unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"                  # Go to previous dir with -
+
+alias tree="tree -A"
+alias treed="tree -d"
+alias tree1="tree -d -L 1"
+alias tree2="tree -d -L 2"
+
+# Miscellaneous
