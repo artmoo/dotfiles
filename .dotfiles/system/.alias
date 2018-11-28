@@ -21,6 +21,7 @@ LS_GROUPDIRSFIRST=$(is-supported "ls --group-directories-first" --group-director
 alias l="ls -lhA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ll="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO"
 alias ld="ls -ld $LS_COLORS */"
+alias ls="ls $LS_COLORS"
 
 unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
 
