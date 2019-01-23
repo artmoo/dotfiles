@@ -122,3 +122,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.q		setfiletype q
   au! BufRead,BufNewFile *.s		setfiletype sql
 augroup END
+
+au BufNewFile,BufRead Jenkinsfile setf groovy
