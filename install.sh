@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#this is not needed
 
 cd "$(dirname "${BASH_SOURCE[0]}")";
 
